@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  # MongoDB service
+  mongo:
+    image: mongo:6.0.6
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      - db:/data/db
+
+  # App service
+  app:
+    depends_on:
+      - mongo
+    build: ./
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+
+volumes:
+  # MongoDB data volume
+  db:
