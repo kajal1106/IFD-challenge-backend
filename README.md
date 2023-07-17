@@ -46,9 +46,11 @@ To run the backend using Docker:
   ```shell
    docker-compose up -d --build
 
-4. Ensure no other application is running on your machine's port 3000. The backend application will start and be exposed from port 3000. To run the app locally, you can go to your browser and paste http://localhost:3000/tickets
+4. Ensure no other application is running on your machine's port 3000. The backend application will start and be exposed from port 3000. To run the app locally, you can go to your browser and paste `http://localhost:3000/tickets`
+
 
 ### TODO
+
 1. Add tests to check for failed requests
 
 2. Research about Sinon Stubs so that the main database in not touched
