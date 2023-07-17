@@ -6,7 +6,8 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    // "types": ["@types/jest", "node", "@types/mocha"],
   },
-    "include": ["src"]
+    "include": ["src", "tests"]
 }
