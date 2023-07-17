@@ -16,6 +16,7 @@ export const createTicket: RequestHandler = async (req, res) => {
     const ticket = await Ticket.create({ client, issue, status, deadline });
     res.status(201).json(ticket);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: 'Failed to create ticket' });
   }
 };
